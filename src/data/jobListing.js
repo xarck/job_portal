@@ -35,7 +35,7 @@ const jobListings = [
         experience: 4,
         remote: false,
         techStack: ["Agile", "Scrum", "Jira", "Data Analysis"],
-        role: "Product Management",
+        role: "DevOps",
         minBasePay: 90000,
     },
     {
@@ -61,7 +61,7 @@ const jobListings = [
         experience: 3,
         remote: false,
         techStack: ["Figma", "Adobe XD", "Sketch", "User Research"],
-        role: "User Experience",
+        role: "DevOps",
         minBasePay: 70000,
     },
     {
@@ -305,6 +305,25 @@ const jobListings = [
             "Bash Scripting",
         ],
         role: "Systems Administration",
+        minBasePay: 70000,
+    },
+    {
+        id: 21,
+        title: "Systems Administrator",
+        company: "SysTech",
+        location: "Atlanta, GA",
+        description:
+            "We are looking for a Systems Administrator to join our team and manage our IT infrastructure. You will be responsible for deploying and maintaining servers, managing virtualization technologies, implementing backup and disaster recovery solutions, and ensuring system security and compliance. Strong knowledge of Linux and Windows server administration, as well as experience with scripting and automation tools, is required.",
+        experience: 4,
+        remote: false,
+        techStack: [
+            "Linux",
+            "Windows Server",
+            "Virtualization",
+            "Ansible",
+            "Bash Scripting",
+        ],
+        role: "DevOps",
         minBasePay: 70000,
     },
 ];

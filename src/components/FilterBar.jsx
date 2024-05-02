@@ -93,9 +93,29 @@ const FilterBar = () => {
                         <option value="Back-end">Back-end</option>
                         <option value="Full Stack">Full Stack</option>
                         <option value="Data Science">Data Science</option>
-                        {/* Add more role options */}
+                        <option value="DevOps">DevOps</option>
                     </select>
                 </div>
+
+                <div className="w-full md:w-1/4 px-3 mb-6 md:mb-0">
+                    <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                        Tech Stack
+                    </label>
+                    <select
+                        name="techStack"
+                        value={filters.techStack}
+                        onChange={handleFilterChange}
+                        className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    >
+                        <option value="">Select Tech Stack</option>
+                        <option value="Python">Python</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Java">Java</option>
+                        <option value="React">React</option>
+                        <option value="MongoDB">MongoDB</option>
+                    </select>
+                </div>
+
                 <div className="w-full md:w-1/4 px-3 mb-6 md:mb-0">
                     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                         Min Base Pay

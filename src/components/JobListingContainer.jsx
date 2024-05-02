@@ -13,7 +13,7 @@ const JobListingContainer = () => {
 
     const filteredJobs = filterJobs(jobListingsState, filtersState);
 
-    const jobsPerPage = 6; 
+    const jobsPerPage = 6;
 
     const handleScroll = useCallback(() => {
         const { scrollTop, clientHeight, scrollHeight } =
@@ -26,13 +26,12 @@ const JobListingContainer = () => {
                 type: "SET_JOB_LISTINGS",
                 payload: [...jobListingsState, ...nextPageJobs],
             });
-            
+
             dispatch({ type: "SET_CURRENT_PAGE", payload: currentPage + 1 });
         }
     }, [dispatch, currentPage, jobListingsState, jobsPerPage]);
 
     useEffect(() => {
-        
         dispatch({
             type: "SET_JOB_LISTINGS",
             payload: jobListings.slice(0, jobsPerPage),

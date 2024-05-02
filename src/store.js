@@ -17,7 +17,6 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case "SET_JOB_LISTINGS":
-            console.log(action.payload);
             return { ...state, jobListings: action.payload };
         case "SET_FILTERS":
             return { ...state, filters: action.payload };

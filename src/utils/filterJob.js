@@ -1,25 +1,32 @@
 const filterJobs = (jobListings, filters) => {
+    const {
+        minExperience,
+        companyName,
+        location,
+        remote,
+        techStack,
+        role,
+        minBasePay,
+    } = filters;
+
     return jobListings.filter((job) => {
-        const matchesExperience = job.experience >= filters.minExperience;
-        const matchesCompany = filters.companyName
-            ? job.company
-                  .toLowerCase()
-                  .includes(filters.companyName.toLowerCase())
+        const matchesExperience =
+            job.experience >= minExperience || minExperience === 0;
+        const matchesCompany = companyName
+            ? job.company.toLowerCase().includes(companyName.toLowerCase())
             : true;
-        const matchesLocation = filters.location
-            ? job.location
-                  .toLowerCase()
-                  .includes(filters.location.toLowerCase())
+        const matchesLocation = location
+            ? job.location.toLowerCase().includes(location.toLowerCase())
             : true;
-        const matchesRemote =
-            filters.remote === null || job.remote === filters.remote;
+        const matchesRemote = remote === null || job.remote === remote;
         const matchesTechStack =
-            filters.techStack.length === 0 ||
-            job.techStack.some((t) => filters.techStack.includes(t));
-        const matchesRole = filters.role
-            ? job.role.toLowerCase() === filters.role.toLowerCase()
+            techStack.length === 0 ||
+            job.techStack.some((t) => techStack.includes(t));
+        const matchesRole = role
+            ? job.role.toLowerCase() === role.toLowerCase()
             : true;
-        const matchesMinBasePay = job.minBasePay >= filters.minBasePay;
+        const matchesMinBasePay =
+            job.minBasePay >= minBasePay || minBasePay === 0;
 
         return (
             matchesExperience &&
